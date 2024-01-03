@@ -1,12 +1,18 @@
+body {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
 #easel {
-  background-image:
-    repeating-linear-gradient(#cecece 0 1px, transparent 1px 100%),
-    repeating-linear-gradient(90deg, #cecece 0 1px, transparent 1px 100%);
-  background-size: 0.75vw 0.75vw;
+  display: grid;
+  flex-wrap: wrap;
+  overflow: hidden;
   background-color: antiquewhite;
-  height: 50vw;
-  width: 80vw;
+  height: 30vw;
+  width: 30vw;
   border-radius: 3vw;
+  position: relative;
 }
 
 #border {
@@ -17,13 +23,15 @@
   color: rgb(204, 0, 0);
   outline-color: rgb(255, 56, 56);
   border-radius: 3vw;
-  padding-bottom: 3vw;
+  padding-bottom: 1vw;
+  height: 50vw;
+  width: 90vw;
+  border-color: rgb(239, 219, 192);
 }
 
 #upper {
   display: flex;
   align-items: center;
-  margin: auto;
   color: gold;
   font-style: italic;
   font-family:monospace;
@@ -36,8 +44,8 @@ span {
 }
 
 .wheel {
-  height: 9vw;
-  width: 9vw;
+  height: 6vw;
+  width: 6vw;
   background-color: white;
   border-radius:100%;
   margin: 1vw;
@@ -45,8 +53,11 @@ span {
 
 #lower {
   display: flex;
-  padding-top: 2vw;
+  align-items:center;
+  justify-content: space-around;
+  padding-top: 0.5vw;
   margin: 0;
+  width: 100vw;
 }
 
 #bottom-text {
@@ -55,6 +66,7 @@ span {
   align-items: center;
   justify-content: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5vw;
   font-weight: 900;
 }
 
@@ -64,4 +76,10 @@ p {
 
 h1 {
   margin: 1vw 2vw;
+}
+
+#easel > * {
+  height: 100%;
+  background-color: #ffffff;
+  transition: all 0.5s;
 }
